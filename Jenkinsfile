@@ -2,7 +2,7 @@
 /* Checkout code stage */
 
 
-node ('node-1') {
+node ('any') {
   stage('Checkout Stage') {
     checkout scm;
   }
