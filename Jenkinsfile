@@ -17,7 +17,7 @@ pipeline {
 	
 	Properties([
 	
-	[buildDiscarder(logRotator(daysToKeepStr: '1', numToKeepStr: '5'))],
+	[$class : 'BuildDiscarderProperty', strategy : '[ $class LogRotator, daysToKeepStr: '1', numToKeepStr: '5']],
 	pipelineTriggers([githubpush()]),
 	parameters([
 	
