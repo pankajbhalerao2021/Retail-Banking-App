@@ -8,10 +8,12 @@
     }
 	
 	
-	/* Build the source code and Perform the Unit Tests*/
+	/* Build the source code and Perform the Unit Tests
 	
 	stage('Build and Unit Test'){
 	
 	sh 'mvn clean install -Dmaven.test.skip=true'
 	
 	}
+	
+	*/
