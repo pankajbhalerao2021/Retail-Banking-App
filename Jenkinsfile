@@ -12,21 +12,24 @@ This snippet will:
 	
 */
 
-
 	
+pipeline {
+
+ agent any
+
+	/*
 	Properties([
 	
 	[$class : 'BuildDiscarderProperty', strategy : [ $class : 'LogRotator', daysToKeepStr: '1', numToKeepStr: '5']],
-	pipelineTriggers([githubpush()]),
+	pipelineTriggers([githubpush()]), */
+
+	
 	parameters([
 	
 	choice(choices: 'Snapshot\nRelease',description: 'Do you need snapshot or release?', name: 'Requested_Action' )
 	])
-	])
 	
-	
-pipeline {
-				agent any
+				
 				stages{
 				stage('Checkout SCM') {
 				steps
