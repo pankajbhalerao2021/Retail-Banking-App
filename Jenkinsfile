@@ -13,7 +13,6 @@ This snippet will:
 */
 
 
-pipeline {
 	
 	Properties([
 	
@@ -24,6 +23,9 @@ pipeline {
 	choice(choices: 'Snapshot\nRelease',description: 'Do you need snapshot or release?', name: 'Requested_Action' )
 	])
 	])
+	
+	
+pipeline {
 				agent any
 				stages{
 				stage('Checkout SCM') {
