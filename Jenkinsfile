@@ -24,10 +24,10 @@ pipeline {
 	pipelineTriggers([githubpush()]), */
 
 	
-	parameters([
+	parameters{
 	
-	choice(choices: 'Snapshot\nRelease',description: 'Do you need snapshot or release?', name: 'Requested_Action' )
-	])
+	choice(choices: 'Snapshot\nRelease', description: 'Do you need snapshot or release?', name: 'Requested_Action' )
+	}
 	
 				
 				stages{
