@@ -1,18 +1,6 @@
-pipeline {
-
-  agent any
-
-  
-
-  stages {
-
-    // Build
-    stage('Build') {
-      
-        deleteDir()
+stage('Checkout scm') {
+    node {
         checkout scm
-      }
+        
     }
-
-   
-}
+	}
