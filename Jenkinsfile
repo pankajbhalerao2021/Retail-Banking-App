@@ -40,7 +40,7 @@ pipeline {
 				}
 				stage ('Build and Unit Test'){
 					steps{
-					withMaven(MavensettingConfig: 'Maven-settings-pb1'){
+					withMaven(mavenSettingsConfig: 'Maven-settings-pb1'){
 					
 					sh 'mvn clean install -Dmaven.test.skip=true'
 					
