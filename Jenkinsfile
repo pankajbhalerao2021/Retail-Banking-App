@@ -49,6 +49,24 @@ pipeline {
 					
 					}
 					}
+					
+					
+					
+					stage ('Sonar Code quality scan'){
+					steps{
+					withSonarQubeEnv(installationName: 'prod_sonarqube'){
+					withMaven(mavenSettingsConfig: 'Maven-settings-pb1'){
+					
+					
+					sh 'mvn -B sonar:sonar -Dsonar.branch.name=$BRANCH_NAME'
+					
+					}
+					}
+					
+					}
+					}
+					
+					
 	}
 	}
 	
