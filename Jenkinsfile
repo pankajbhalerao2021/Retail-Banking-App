@@ -67,6 +67,24 @@ pipeline {
 					}
 					}
 					
+					stage ('Upload artifacts to Nexus'){
+					steps{
+					withMaven(mavenSettingsConfig: 'Maven-settings-pb1'){
+					withCredentials([usernamePassword(credentialsId: 'NEXUS_CREDENTIALS', passwordVariable: 'NEXUS_PASSWORD', usernameVariable: 'NEXUS_USERNAME')]){
+					
+					
+					sh 'mvn deploy -Dmaven.test.skip=true'
+					
+					}	
+					
+					
+					
+					}
+					}
+					
+					}
+					
+					
 					
 	}
 	}
