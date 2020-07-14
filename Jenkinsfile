@@ -58,7 +58,8 @@ pipeline {
 					withMaven(mavenSettingsConfig: 'Maven-settings-pb1'){
 					
 					
-					sh 'mvn -B sonar:sonar -Dsonar.branch.name=$BRANCH_NAME'
+					sh 'mvn -B sonar:sonar '
+					//sh 'mvn -B sonar:sonar -Dsonar.branch.name=$BRANCH_NAME'
 					
 					}
 					}
