@@ -98,17 +98,11 @@
 	</build>
 	
 	<distributionManagement>
-		<repository>
-			<id>github</id>
-			<name>GitHub Subhrodip Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/ohbus/Retail-Banking</url>
-		</repository>
 		<snapshotRepository>
 		<id>maven-snapshots</id>
 		<name>maven-snapshots</name>
 		<url>http://35.238.212.95:8081/repository/maven-snapshots/</url>
-		</snapshotRepository>
-		
+		</snapshotRepository>		
 	</distributionManagement>
 
 
