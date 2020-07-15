@@ -92,12 +92,19 @@
     <configuration>
         <source>1.8</source>
         <target>1.8</target>
-		<checkModificationExcludes>
-        <checkModificationExclude>pom.xml</checkModificationExclude>
-		<checkModificationExclude>**</checkModificationExclude>
-    </checkModificationExcludes>
-        </configuration>
+		</configuration>
   </plugin>
+  
+  <plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-release-plugin</artifactId>
+<configuration>
+    <checkModificationExcludes>
+        <checkModificationExclude>pom.xml</checkModificationExclude>
+        <checkModificationExclude>**</checkModificationExclude>
+    </checkModificationExcludes>
+</configuration>
+</plugin>
 		</plugins>
 	</build>
 	
