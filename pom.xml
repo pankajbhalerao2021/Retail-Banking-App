@@ -107,6 +107,12 @@
 		</plugins>
 	</build>
 	
+	<scm>
+   <connection>scm:git:https://github.com/pankajbhalerao2021/retail-bank.git</connection>
+   <url>https://github.com/pankajbhalerao2021/retail-bank.git</url>
+   <developerConnection>scm:git:https://github.com/pankajbhalerao2021/retail-bank.git</developerConnection>
+   </scm>
+	
 	<distributionManagement>
 		<repository>
 		<id>nexus</id>
