@@ -96,16 +96,15 @@
   </plugin>
   
   <plugin>
-   <groupId>org.apache.maven.plugins</groupId>
-   <artifactId>maven-release-plugin</artifactId>
-   <version>2.4.2</version>
-   <configuration>
-      <tagNameFormat>v@{project.version}</tagNameFormat>
-      <autoVersionSubmodules>true</autoVersionSubmodules>
-      <releaseProfiles>releases</releaseProfiles>
-   </configuration>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-release-plugin</artifactId>
+  <configuration>
+    <checkModificationExcludes>
+        <checkModificationExclude>pom.xml</checkModificationExclude>
+		<checkModificationExclude>**</checkModificationExclude>
+    </checkModificationExcludes>
+  </configuration>
 </plugin>
-
 		</plugins>
 	</build>
 	
