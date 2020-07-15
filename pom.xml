@@ -12,52 +12,42 @@
 	<artifactId>retail.banking</artifactId>
 	<version>3.0.0-SNAPSHOT</version>
 	<name>retail.banking</name>
-	<description>Retail banking project using MVC for TCS Case Study using Agile Methodologies</description>
-	
+	<description>Retail banking project using MVC for TCS Case Study using Agile Methodologies</description>	
   		<properties>
 		<java.version>11</java.version>
 	</properties>
-
-	<dependencies>
-	
+	<dependencies>	
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        
+        </dependency>        
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		
+		</dependency>		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
-		</dependency>
-		
+		</dependency>		
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
-		</dependency>
-		
+		</dependency>		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -68,23 +58,19 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-		
+		</dependency>		
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		
+		</dependency>		
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
@@ -93,8 +79,7 @@
         <source>1.8</source>
         <target>1.8</target>
 		</configuration>
-  </plugin>
-  
+  </plugin>  
   <plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-release-plugin</artifactId>
@@ -106,14 +91,12 @@
   </configuration>
 </plugin>
 		</plugins>
-	</build>
-	
+	</build>	
 	<scm>
    <connection>scm:git:https://github.com/pankajbhalerao2021/retail-bank.git</connection>
    <url>https://github.com/pankajbhalerao2021/retail-bank.git</url>
    <developerConnection>scm:git:https://github.com/pankajbhalerao2021/retail-bank.git</developerConnection>
-   </scm>
-	
+   </scm>	
 	<distributionManagement>
 		<repository>
 		<id>nexus</id>
@@ -126,6 +109,4 @@
 	     <url>http://34.72.180.83:8081/repository/maven-snapshots/</url>
 	    </snapshotRepository>		
 	</distributionManagement>
-
-
 </project>
