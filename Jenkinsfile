@@ -72,7 +72,9 @@ pipeline {
 					withMaven(mavenSettingsConfig: 'Maven-settings-pb1'){
 					withCredentials([usernamePassword(credentialsId: 'NEXUS_CREDENTIALS', passwordVariable: 'NEXUS_PASSWORD', usernameVariable: 'NEXUS_USERNAME')]){
 					withCredentials([usernamePassword(credentialsId: 'GIT_CRED', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]){
-					 if (params.Requested_Action == 'Release'){
+					  script {
+					 
+					 if (params.Requested_Action=='Release'){
 					 
 					
 					 
@@ -81,7 +83,7 @@ pipeline {
 					 
 									 
 					 }
-					 
+					 }
 					 else{
 					
 					sh 'mvn deploy -Dmaven.test.skip=true'
