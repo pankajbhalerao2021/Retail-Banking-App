@@ -83,12 +83,13 @@ pipeline {
 					 
 									 
 					 }
-					 }
+					
 					 else{
 					
 					sh 'mvn deploy -Dmaven.test.skip=true'
 					
 					}
+					 }
 					
 					}
 					}
