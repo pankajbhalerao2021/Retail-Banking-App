@@ -78,7 +78,7 @@ pipeline {
 					 
 					
 					 sh """
-					 git checkout $BRANCH_NAME'
+					 git checkout $BRANCH_NAME
 					 mvn release:clean release:prepare release:perform -Dmaven.test.skip=true
 					 
 						"""			 
