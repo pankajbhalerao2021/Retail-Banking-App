@@ -67,22 +67,36 @@ pipeline {
 					}
 					}
 					
-					stage ('Upload artifacts to Nexus'){
-					steps{
+					stage ('Upload application artifacts to Nexus'){
+					steps {
 					withMaven(mavenSettingsConfig: 'Maven-settings-pb1'){
 					withCredentials([usernamePassword(credentialsId: 'NEXUS_CREDENTIALS', passwordVariable: 'NEXUS_PASSWORD', usernameVariable: 'NEXUS_USERNAME')]){
-					
+					withCredentials([usernamePassword(credentialsId: 'GIT_CRED', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]){
+					 if (params.Requested_Action== 'Release'){
+					 
+					 sh """					 
+					 git checkout $BRANCH_NAME
+					 mvn release:clean release:prepare release:perform -Dmaven.test.skip=true
+					 
+					 """
+					 
+					 }
+					 
+					 else{
 					
 					sh 'mvn deploy -Dmaven.test.skip=true'
 					
-					}	
-					
-					
-					
-					}
 					}
 					
 					}
+					}
+					}
+					}
+					}
+					
+					
+					
+					
 					
 					
 					
