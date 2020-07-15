@@ -72,9 +72,10 @@ pipeline {
 					withMaven(mavenSettingsConfig: 'Maven-settings-pb1'){
 					withCredentials([usernamePassword(credentialsId: 'NEXUS_CREDENTIALS', passwordVariable: 'NEXUS_PASSWORD', usernameVariable: 'NEXUS_USERNAME')]){
 					withCredentials([usernamePassword(credentialsId: 'GIT_CRED', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]){
-					 if (params.Requested_Action== 'Release'){
+					 if (params.Requested_Action == 'Release'){
 					 
-					 sh """					 
+					 sh """		
+					 
 					 git checkout $BRANCH_NAME
 					 mvn release:clean release:prepare release:perform -Dmaven.test.skip=true
 					 
