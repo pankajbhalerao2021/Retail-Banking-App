@@ -103,6 +103,7 @@
 		<name>maven-release</name>
 		<url>http://35.238.212.95:8081/repository/maven-releases/</url>
 		</repository>
+		<snapshotRepository>
 		<id>nexus</id>
 	     <name>nexus-snapshots</name>
 	     <url>http://34.72.180.83:8081/repository/maven-snapshots/</url>
