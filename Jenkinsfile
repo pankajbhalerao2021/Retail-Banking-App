@@ -76,11 +76,11 @@ pipeline {
 					 
 					 if (params.Requested_Action=='Release'){
 					 
-					
+					sh 'mvn deploy -Dmaven.test.skip=true'
 					 
-					 sh 'git checkout $BRANCH_NAME'
-					 sh 'mvn -X release:clean release:prepare release:perform -Dmaven.test.skip=true'
-					 		 
+					 //Sh 'git checkout $BRANCH_NAME'
+					// sh 'mvn -X release:clean release:prepare release:perform -Dmaven.test.skip=true'
+
 					 }
 					
 					 else{
