@@ -71,8 +71,8 @@ pipeline {
 				stage ('Upload application artifacts to Nexus'){
 					steps {
 					withMaven(mavenSettingsConfig: 'Maven-settings-pb1'){
-					withCredentials([usernamePassword(credentialsId: 'NEXUS_CREDENTIALS', passwordVariable: 'NEXUS_PASSWORD', usernameVariable: 'NEXUS_USERNAME')]){
-					withCredentials([usernamePassword(credentialsId: 'GIT_CRED', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]){
+					//withCredentials([usernamePassword(credentialsId: 'NEXUS_CREDENTIALS', passwordVariable: 'NEXUS_PASSWORD', usernameVariable: 'NEXUS_USERNAME')]){
+					//withCredentials([usernamePassword(credentialsId: 'GIT_CRED', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]){
 					  script {
 
 					 if (params.Requested_Action=='Release'){
@@ -89,8 +89,8 @@ pipeline {
 
 					sh 'mvn deploy -Dmaven.test.skip=true -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true'
 
-					}
-					 }
+					//}
+					 //}
 
 
 					}
