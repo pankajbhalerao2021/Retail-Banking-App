@@ -23,7 +23,7 @@ pipeline {
 	[$class : 'BuildDiscarderProperty', strategy : [ $class : 'LogRotator', daysToKeepStr: '1', numToKeepStr: '5']],
 	pipelineTriggers([githubpush()]), */
 
-def mailid="pankajbhalerao2021@gmail.com"
+ def mailid = "pankajbhalerao2021@gmail.com"
 
 	parameters{
 
