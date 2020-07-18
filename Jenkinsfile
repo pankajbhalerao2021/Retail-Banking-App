@@ -23,6 +23,7 @@ pipeline {
 	[$class : 'BuildDiscarderProperty', strategy : [ $class : 'LogRotator', daysToKeepStr: '1', numToKeepStr: '5']],
 	pipelineTriggers([githubpush()]), */
 
+def mailid="pankajbhalerao2021@gmail.com"
 	
 	parameters{
 	
@@ -76,16 +77,16 @@ pipeline {
 					 
 					 if (params.Requested_Action=='Release'){
 					 
-					sh 'mvn deploy -Dmaven.test.skip=true'
-					 
-					 //Sh 'git checkout $BRANCH_NAME'
-					// sh 'mvn -X release:clean release:prepare release:perform -Dmaven.test.skip=true'
+					sh """
+					 git config user.email '$mailid'
+					 git checkout $BRANCH_NAME
+					 mvn -X release:clean release:prepare release:perform -Dmaven.test.skip=true -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
 
 					 }
 					
 					 else{
 					
-					sh 'mvn deploy -Dmaven.test.skip=true'
+					sh 'mvn deploy -Dmaven.test.skip=true -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true'
 					
 					}
 					 }
