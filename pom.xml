@@ -11,7 +11,7 @@
 	<version>3.0.0-SNAPSHOT</version>
 	<name>retail.banking</name>
 	<description>Retail banking project using MVC for TCS Case Study using Agile Methodologies</description>	
-  		<properties>
+  	<properties>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>	
@@ -69,7 +69,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-<plugin>
+	<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.3</version>
