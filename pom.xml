@@ -4,11 +4,11 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>xyz.subho</groupId>
 	<artifactId>retail.banking</artifactId>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>4.0.0</version>
 	<name>retail.banking</name>
 	<description>Retail banking project using MVC for TCS Case Study using Agile Methodologies</description>	
   	<properties>
@@ -90,11 +90,18 @@
 </plugin>
 		</plugins>
 	</build>	
-	<scm>
+	<!--<scm>
    <connection>scm:git:https://github.com/pankajbhalerao2021/retail-bank.git</connection>
    <url>https://github.com/pankajbhalerao2021/retail-bank.git</url>
    <developerConnection>scm:git:https://github.com/pankajbhalerao2021/retail-bank.git</developerConnection>
-   </scm>	
+     <tag>retail.banking-4.0.0</tag>
+  </scm>-->
+	<scm>
+		<connection>scm:git:http://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/pankajbhalerao2021/retail-bank.git</connection>
+		<url>http://github.com/pankajbhalerao2021/retail-bank.git</url>
+		<developerConnection>scm:git:http://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/pankajbhalerao2021/retail-bank.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 	<distributionManagement>
 		<repository>
 		<id>nexus</id>
