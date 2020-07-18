@@ -76,11 +76,11 @@ pipeline {
 					  script {
 
 					 if (params.Requested_Action=='Release'){
-                    //-Dresume=false -DuseReleaseProfile=false release:prepare
+                    //-Dresume=false -DuseReleaseProfile=false
 					sh """
 					 git config user.email 'pankajbhalerao2021@gmail.com'
 					 git checkout $BRANCH_NAME
-					 mvn release:clean  release:perform -Dmaven.test.skip=true -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+					 mvn release:clean release:prepare release:perform -Dmaven.test.skip=true -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
 
                         """
 					 }
